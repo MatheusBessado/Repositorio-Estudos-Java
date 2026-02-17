@@ -1,6 +1,6 @@
 package Construtores;
 
-import java.io.IO;
+
 
 class MainConstrutor {
     public static void main(String[] args) {
@@ -9,6 +9,6 @@ class MainConstrutor {
         System.out.println("Nome: " + pessoa.nome);
         System.out.println("Idade: " + pessoa.idade);
         // I.O substitui System.out.println na nova versão do Java
-         IO.print("Cargo: " + pessoa.cargo);
+         System.out.println("Cargo: " + pessoa.cargo);
     }
 }
