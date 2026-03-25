@@ -1,4 +1,4 @@
-package Exercicios;
+package br.com.estudosjava.exercicios;
 
 public class SalaDeAula {
     // 2. Variável estática para armazenar o número total de alunos

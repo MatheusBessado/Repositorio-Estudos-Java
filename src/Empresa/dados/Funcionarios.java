@@ -1,4 +1,4 @@
-package Empresa.dados;
+package br.com.estudosjava.empresa.dados;
 
 public class Funcionarios { // Declaração da classe Empresa.dados.Funcionarios
     String nomeFuncionario; // Variável para armazenar o nome do funcionário

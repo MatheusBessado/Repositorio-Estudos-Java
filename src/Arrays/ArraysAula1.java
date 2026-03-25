@@ -1,4 +1,4 @@
-package Arrays;
+package br.com.estudosjava.arrays;
 
 /**
  * Exemplo de iteração com for-each mantendo o pareamento entre dois arrays (alunos e notas).

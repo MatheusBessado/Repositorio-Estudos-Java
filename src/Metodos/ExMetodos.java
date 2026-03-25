@@ -1,5 +1,5 @@
-package Metodos;
-import Metodos.AtividadeMetodos;
+package br.com.estudosjava.metodos;
+import br.com.estudosjava.metodos.AtividadeMetodos;
 public class ExMetodos {
     public static void main(String[] args) {
         AtividadeMetodos prod = new AtividadeMetodos();

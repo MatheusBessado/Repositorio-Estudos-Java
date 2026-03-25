@@ -1,4 +1,4 @@
-package Metodos;
+package br.com.estudosjava.metodos;
 
 public class AtvCarro {
     public static void main(String[] args) {

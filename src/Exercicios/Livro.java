@@ -1,4 +1,4 @@
-package Exercicios;
+package br.com.estudosjava.exercicios;
 
 public class Livro {
     public String titulo;           // público
@@ -65,7 +65,7 @@ public class Livro {
 
     @Override
     public String toString() {
-        return "Exercicios.Livro{" +
+        return "Livro{" +
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", anoPublicacao=" + anoPublicacao +

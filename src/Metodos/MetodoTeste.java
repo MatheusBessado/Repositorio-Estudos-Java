@@ -1,4 +1,4 @@
-package Metodos;
+package br.com.estudosjava.metodos;
 public class MetodoTeste {
     public String nomeAluno;
     public int idadeAluno;

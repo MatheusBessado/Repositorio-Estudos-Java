@@ -1,4 +1,23 @@
-package Exercicios;
+package br.com.estudosjava.exercicios.test;
+
+import br.com.estudosjava.exercicios.Livro;
+
+/*
+ Antigo erro:
+ - Este teste tentava acessar diretamente campos com visibilidade
+   `protected` e default (pacote) de `Livro` a partir de um pacote
+   diferente (`br.com.estudosjava.exercicios.test`), causando erros de
+   compilação:
+     "anoPublicacao has protected access in Livro"
+     "preco is not public in Livro; cannot be accessed from outside package"
+
+ O que foi alterado / o que funciona agora:
+ - Substituí acessos diretos por chamadas aos getters públicos
+   (`getAnoPublicacao()` e `getPreco()`), que permitem ler os valores
+   corretamente a partir de outro pacote.
+ - Mantive o acesso direto a `titulo` (public) e ao `autor` via getter
+   (autor é private, já estava sendo acessado pelo getter).
+*/
 
 public class LivroTeste {
     public static void main(String[] args) {
@@ -17,15 +36,17 @@ public class LivroTeste {
         System.out.println("l2.titulo: " + l2.titulo);
         System.out.println("l3.titulo: " + l3.titulo);
 
-        // anoPublicacao é protected -> dentro do mesmo pacote (default) é acessível
-        System.out.println("l1.anoPublicacao: " + l1.anoPublicacao);
-        System.out.println("l2.anoPublicacao: " + l2.anoPublicacao);
-        System.out.println("l3.anoPublicacao: " + l3.anoPublicacao);
+        // anoPublicacao é protected -> NÃO é acessível a partir de outro pacote
+        // Use o getter público em vez do acesso direto.
+        System.out.println("l1.anoPublicacao: " + l1.getAnoPublicacao());
+        System.out.println("l2.anoPublicacao: " + l2.getAnoPublicacao());
+        System.out.println("l3.anoPublicacao: " + l3.getAnoPublicacao());
 
-        // preco é default (sem modificador) -> acessível dentro do mesmo pacote
-        System.out.println("l1.preco: " + l1.preco);
-        System.out.println("l2.preco: " + l2.preco);
-        System.out.println("l3.preco: " + l3.preco);
+        // preco é package-private -> NÃO é acessível a partir de outro pacote
+        // Use o getter público em vez do acesso direto.
+        System.out.println("l1.preco: " + l1.getPreco());
+        System.out.println("l2.preco: " + l2.getPreco());
+        System.out.println("l3.preco: " + l3.getPreco());
 
         // autor é private -> deve ser acessado via getter
         System.out.println("l1.getAutor(): " + l1.getAutor());
