@@ -1,0 +1,8 @@
+package br.com.estudosjava.orientacaoobjetos;
+
+public class VeiculoMain {
+    public static void main(String[] args) {
+        Carro carro = new Carro();
+        carro.acelerar();
+    }
+}
